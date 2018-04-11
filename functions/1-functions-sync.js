@@ -5,6 +5,11 @@ const campbellsTomatoSoup = {
   weightInOz: 12
 };
 
+const heinzBeansSoup = {
+  contents: 'beans soup',
+  weightInOz: 10
+};
+
 function openCan(foodCan) {
   return foodCan.contents;
 }
@@ -26,8 +31,12 @@ function eatLunch(cannedFood) {
 }
 
 function main() {
+  const dayName = 'Wednesday';
+  const soupOfDay = (dayName === 'Wednesday')
+    ? heinzBeansSoup
+    : campbellsTomatoSoup;
   console.log('It\'s lunch time!');
-  eatLunch(campbellsTomatoSoup);
+  eatLunch(soupOfDay);
   console.log('Finished lunch');
 }
 
